@@ -1,12 +1,15 @@
+<!-- markdownlint-configure-file { "MD013": { "line_length": 200 } } -->
 # Equipe de Segurança do LAPPIS - Red Team & Blue Team
 
 ## Visão Geral
 
-Bem-vindo ao repositório da equipe de segurança, onde trabalhamos em estreita colaboração para proteger nossa organização contra ameaças cibernéticas. Nossa equipe é composta por dois grupos principais: Red Team e Blue Team.
+Bem-vindo ao repositório da equipe de segurança, onde trabalhamos em estreita colaboração para proteger nossa organização contra ameaças cibernéticas.
+Nossa equipe é composta por dois grupos principais: Red Team e Blue Team.
 
 ### Red Team
 
-A equipe de Red Team é responsável por simular ataques cibernéticos para testar a eficácia das defesas da nossa organização. Utilizamos técnicas e ferramentas de hackers éticos para identificar vulnerabilidades, explorar sistemas e ajudar a melhorar a postura de segurança geral.
+A equipe de Red Team é responsável por simular ataques cibernéticos para testar a eficácia das defesas da nossa organização.
+Utilizamos técnicas e ferramentas de hackers éticos para identificar vulnerabilidades, explorar sistemas e ajudar a melhorar a postura de segurança geral.
 
 **Principais áreas de foco:**
 
@@ -20,7 +23,8 @@ A equipe de Red Team é responsável por simular ataques cibernéticos para test
 
 ### Blue Team
 
-A equipe de Blue Team é encarregada de defender nossa organização contra ameaças cibernéticas. Monitoramos ativamente a rede, detectamos e respondemos a incidentes de segurança, implementamos controles de segurança e promovemos práticas seguras em toda a organização.
+A equipe de Blue Team é encarregada de defender nossa organização contra ameaças cibernéticas.
+Monitoramos ativamente a rede, detectamos e respondemos a incidentes de segurança, implementamos controles de segurança e promovemos práticas seguras em toda a organização.
 
 **Principais áreas de foco:**
 
