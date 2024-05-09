@@ -22,15 +22,24 @@ function delete_users(){
 }
 
 # Create the group's folder
-delete_group "equip_member"
+delete_group "equipe-dev"
+delete_group "equipe-dev"
+delete_group "equipe-infra"
+delete_group "equipe-produto"
+delete_group "equipe-dados"
+delete_group "equipe-dex"
+delete_group "equipe-pencil-labs"
 delete_group "guest"
-delete_group "administrator"
 
-delete_users root
-delete_users guest
-delete_users equip_member
+delete_users "equipe-dev"
+delete_users "equipe-dev"
+delete_users "equipe-infra"
+delete_users "equipe-produto"
+delete_users "equipe-dados"
+delete_users "equipe-dex"
+delete_users "equipe-pencil-labs"
+delete_group "guest"
 
 rm output.txt 2> /dev/null
 
 echo "[+] DONE."
-username@username:~
