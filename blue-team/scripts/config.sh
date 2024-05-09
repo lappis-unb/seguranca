@@ -1,5 +1,7 @@
 #!/usr/bin/bash
 
+sudo apt install makepasswd -y
+
 function create_group_folder(){
         if ! test -d $1; then
                 sudo mkdir /home/$1
