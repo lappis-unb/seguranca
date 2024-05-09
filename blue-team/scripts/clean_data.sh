@@ -33,4 +33,3 @@ delete_users equip_member
 rm output.txt 2> /dev/null
 
 echo "[+] DONE."
-username@username:~

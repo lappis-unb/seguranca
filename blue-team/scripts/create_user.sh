@@ -33,8 +33,7 @@ function new_user(){
 			sudo useradd $username -b /home/equip_member -g equip_member
 			echo $password  | sudo passwd $username --stdin
 			echo "The user $username was created within equip member group .."
-		elif [ "$group" = "guest" ] ; then
-			
+		elif [ "$group" = "guest" ] ; then			
 			# Creates the guest user
 			sudo useradd $username -b /home/guest -g guest
 			echo $password  | sudo passwd $username --stdin

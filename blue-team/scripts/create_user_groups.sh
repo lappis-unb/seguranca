@@ -26,5 +26,3 @@ create_group "guest"
 create_group "equip_member"
 
 echo "[+] Group of users was created successfully :-D. You may now create the users :-D"
-
-
