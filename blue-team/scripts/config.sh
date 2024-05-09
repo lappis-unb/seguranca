@@ -1,8 +1,4 @@
-  GNU nano 7.2                                            create_groups.sh                                            Modified  
 #!/usr/bin/bash
-
-
-BASE_GID=58999
 
 function create_group_folder(){
         if ! test -d $1; then
@@ -11,18 +7,21 @@ function create_group_folder(){
         fi
 }
 function create_group(){
-        BASE_GID=$((BASE_GID+1))
         if ! getent group $1 >> /dev/null; then
-                sudo groupadd $1 -g $BASE_GID
+                sudo groupadd $1 
                 create_group_folder $1
                 echo "[+] Created the $1 group."
         fi
 }
 
-
-
 # Create the proper groupds
+create_group "equipe-dev"
+create_group "equipe-dev"
+create_group "equipe-infra"
+create_group "equipe-produto"
+create_group "equipe-dados"
+create_group "equipe-dex"
+create_group "equipe-pencil-labs"
 create_group "guest"
-create_group "equip_member"
 
 echo "[+] Group of users was created successfully :-D. You may now create the users :-D"
