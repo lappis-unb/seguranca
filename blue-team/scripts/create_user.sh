@@ -21,10 +21,10 @@ function create_user(){
 		    email=${a[2]}
 		    group=${a[3]}
 
-		    if [[ "$group" = "root" || "$group" = "equipe-dev" || "$group" = "equipe-infra" || "$group" = "equipe-produto" || "$group" = "equipe-dados" || "$group" = "equipe-dex" || "$group" = "equipe-pencil-labs" ]] ; then
+		    if [[ "$group" = "admin" || "$group" = "equipe-dev" || "$group" = "equipe-infra" || "$group" = "equipe-produto" || "$group" = "equipe-dados" || "$group" = "equipe-dex" || "$group" = "equipe-pencil-labs" ]] ; then
 			    
-			    # Creates the user wihtin the root group
-			    sudo useradd $username -b /home/root -g $group
+			    # Creates the user wihtin the admin group
+			    sudo useradd $username -b /home/admin -g $group
 			    echo $password  |sudo passwd $username --stdin
 			    echo "The user $username was created with $group privileges. Take care .."
 		    else
