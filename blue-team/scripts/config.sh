@@ -10,14 +10,19 @@ function create_group_folder(){
 }
 function create_group(){
         if ! getent group $1 >> /dev/null; then
-                sudo groupadd $1 
-                create_group_folder $1
+
+		if [ "$1" = "admin" ];then
+                	sudo groupadd $1 -g 0 -o
+		else
+                	sudo groupadd $1 
+ 		fi
+		create_group_folder $1
                 echo "[+] Created the $1 group."
         fi
 }
 
 # Create the proper groupds
-create_group "equipe-dev"
+create_group "admin"
 create_group "equipe-dev"
 create_group "equipe-infra"
 create_group "equipe-produto"

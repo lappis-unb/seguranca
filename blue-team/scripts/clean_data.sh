@@ -2,8 +2,12 @@
 
 function delete_group(){
 	if getent group $1 >> /dev/null; then
-		sudo groupdel $1 >> /dev/null
-		echo "[+] The group $1 was successfully deleted ."
+		if [ "$1" != "admin" ]; then
+			sudo groupdel $1 >> /dev/null
+			if [ "$?" = "0" ];then
+				echo "[+] The group $1 was successfully deleted ."
+			fi
+		fi
 	fi
 	if test -d /home/$1 >> /dev/null; then
 		sudo rm -rf /home/$1 2> /dev/null
@@ -21,8 +25,17 @@ function delete_users(){
 	fi
 }
 
-# Create the group's folder
-delete_group "equipe-dev"
+delete_users "equipe-dev"
+delete_users "equipe-infra"
+delete_users "equipe-produto"
+delete_users "equipe-dados"
+delete_users "equipe-dex"
+delete_users "equipe-pencil-labs"
+delete_group "guest"
+delete_group "admin"
+
+# Delete the group's folder
+delete_group "admin"
 delete_group "equipe-dev"
 delete_group "equipe-infra"
 delete_group "equipe-produto"
@@ -31,14 +44,6 @@ delete_group "equipe-dex"
 delete_group "equipe-pencil-labs"
 delete_group "guest"
 
-delete_users "equipe-dev"
-delete_users "equipe-dev"
-delete_users "equipe-infra"
-delete_users "equipe-produto"
-delete_users "equipe-dados"
-delete_users "equipe-dex"
-delete_users "equipe-pencil-labs"
-delete_group "guest"
 
 rm output.txt 2> /dev/null
 
