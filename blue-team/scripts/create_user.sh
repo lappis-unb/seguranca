@@ -1,3 +1,4 @@
+  GNU nano 7.2                                       create_user.sh                                                 
 #!/usr/bin/bash
 
 regex=1234567890abcdefghijklmnopqrstuvxwyzABCDEFGHIJKLMNOPQRSTUVXWYZ
@@ -24,7 +25,7 @@ function create_user(){
                     if [[ "$group" = "admin" || "$group" = "equipe-dev" || "$group" = "equipe-infra" || "$group" = >
                             
                             # Creates the user wihtin the admin group
-                            sudo useradd $username -b /home/admin -g $group
+                            sudo useradd $username -s /bin/bash -m -b /home/$group -g $group
                             echo "$username:$password" | sudo chpasswd
                             echo "The user $username was created with $group privileges. Take care .."
                     else
@@ -38,5 +39,5 @@ function create_user(){
         exit
     fi
 }
-
+cat /dev/null > new_users.txt
 create_user
