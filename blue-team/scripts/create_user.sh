@@ -21,7 +21,7 @@ function create_user(){
                     email=${a[2]}
                     group=${a[3]}
 
-                    if [[ "$group" = "admin" || "$group" = "equipe-dev" || "$group" = "equipe-infra" || "$group" = "equipe-produto" || "$group" = "equipe-dados" || "$group" = "equipe-dex" || "$group" = "equipe-pencil-labs" ]] ; then
+                    if [[ "$group" = "sudo" || "$group" = "equipe-dev" || "$group" = "equipe-infra" || "$group" = "equipe-produto" || "$group" = "equipe-dados" || "$group" = "equipe-dex" || "$group" = "equipe-pencil-labs" ]] ; then
                             
                             # Creates the user wihtin the admin group
                             sudo useradd $username -s /bin/bash -m -b /home/$group -g $group
