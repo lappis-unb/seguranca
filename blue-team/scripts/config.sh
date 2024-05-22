@@ -22,7 +22,6 @@ function create_group(){
 }
 
 # Create the proper groupds
-create_group "admin"
 create_group "equipe-dev"
 create_group "equipe-infra"
 create_group "equipe-produto"
