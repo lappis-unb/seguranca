@@ -1,4 +1,3 @@
-  GNU nano 7.2                                     delete_user_list.sh *                                            
 #!/bin/bash
 
 list=list.txt
