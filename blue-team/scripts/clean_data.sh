@@ -32,10 +32,8 @@ delete_users "equipe-dados"
 delete_users "equipe-dex"
 delete_users "equipe-pencil-labs"
 delete_group "guest"
-delete_group "admin"
 
 # Delete the group's folder
-delete_group "admin"
 delete_group "equipe-dev"
 delete_group "equipe-infra"
 delete_group "equipe-produto"
