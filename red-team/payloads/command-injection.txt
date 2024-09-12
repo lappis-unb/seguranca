@@ -1,6 +1,7 @@
 eval("ls -a /")
 system("ls -a /")
-`ls -al /` # (backticks contain os command)
+`ls -al /` 
+`cat /etc/passwd` 
 exec("ls -a /")
 spawn("ls -a /")
 open("| ls -a /")
